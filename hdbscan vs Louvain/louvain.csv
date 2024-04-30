@@ -1,0 +1,182 @@
+Algorithm,Error Reason,Utterance,Assigned label,predicted_label,predicted_confidence,cluster_confidence,assigned_topic,predicted_topic,Topic
+Louvain,Mislabeled,Is there a way to know when my card will arrive?,card_arrival,card_delivery_estimate,0.944849491,0.967297161,new_card,new_card,Within
+Louvain,Mislabeled,When will I get my card?,card_arrival,card_delivery_estimate,0.967208624,0.976990845,new_card,new_card,Within
+Louvain,Mislabeled,How long does a card delivery take?,card_arrival,card_delivery_estimate,0.967351377,0.946507739,new_card,new_card,Within
+Louvain,Vague,Status of the card I ordered.,card_arrival,lost_or_stolen_card,0.374374211,0.337575127,new_card,new_card,Within
+Louvain,Mislabeled,How do I know when my card will arrive?,card_arrival,card_delivery_estimate,0.965850294,0.971397205,new_card,new_card,Within
+Louvain,Mislabeled,Is it a good time to exchange?,exchange_rate,exchange_via_app,0.88830179,0.626267416,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Model Error,Why am I being charged more ?,card_payment_wrong_exchange_rate,card_payment_fee_charged,0.903134227,0.586790361,exchange_rate_currency,card_payment,Without
+Louvain,Mislabeled,How can I check the exchange rate applied to my transaction?,card_payment_wrong_exchange_rate,exchange_rate,0.357621491,0.435072584,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Where did this fee come from?,extra_charge_on_statement,card_payment_fee_charged,0.9649719,0.616606207,transactions,card_payment,Without
+Louvain,Model Error,"I am a new customer, and I happened to look at my app and there is a charge I am not familiar with.  Could you tell me why the extra charge is there?",extra_charge_on_statement,transfer_fee_charged,0.395941079,0.290127682,transactions,transfers,Without
+Louvain,Mislabeled,My account was charged for a withdraw I tried to make that was decline.,pending_cash_withdrawal,declined_cash_withdrawal,0.960456431,0.335260628,atm_cash_withdrawal,atm_cash_withdrawal,Within
+Louvain,Model Error,"There is an incoming payment into my account, but it is deactivated. Will they still be processed?",fiat_currency_support,pending_card_payment,0.929246068,0.496117113,exchange_rate_currency,card_payment,Without
+Louvain,Mislabeled,How do I change currencies to euros?,fiat_currency_support,exchange_via_app,0.941125154,0.496509242,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Am I able to exchange currencies?,fiat_currency_support,exchange_via_app,0.97560209,0.712345729,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Can I exchange currencies?,fiat_currency_support,exchange_via_app,0.960763991,0.520957631,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,What countries can I travel to and have access to their currencies?,fiat_currency_support,country_support,0.917220891,0.618606394,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Model Error,"Ordered awhile back, what is the ETA in the US?",card_delivery_estimate,fiat_currency_support,0.300086617,0.555010889,new_card,exchange_rate_currency,Without
+Louvain,Model Error,Can I space out how often money is transferred along my travels?,automatic_top_up,balance_not_updated_after_bank_transfer,0.288992733,0.247143757,top_up,transactions,Without
+Louvain,Model Error,"Is there a top-up feature, if there isn't a lot of money left?",automatic_top_up,pending_top_up,0.752484202,0.434406998,top_up,top_up,Within
+Louvain,Model Error,How do I unblock my card using the app?,card_not_working,pin_blocked,0.972311199,0.952558277,card_malfunction,new_card,Without
+Louvain,Vague,How would I use my money in a different country?,exchange_via_app,receiving_money,0.560737491,0.32324467,exchange_rate_currency,transactions,Without
+Louvain,Mislabeled,Can I change my currency from USD to EUR?,exchange_via_app,fiat_currency_support,0.969311535,0.574009912,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Is a copy of the police report necessary for completing the report process?,lost_or_stolen_card,verify_my_identity,0.622261465,0.87421469,new_card,identity_verification,Without
+Louvain,Mislabeled,"Someone stole my wallet earlier today, not sure exactly when, probably on Piccadilly circus. Can you check if there were any attempts to use the card and obviously block it?",lost_or_stolen_card,cash_withdrawal_not_recognised,0.953414917,0.475327578,new_card,atm_cash_withdrawal,Without
+Louvain,Model Error,Where can I view my PIN?,pin_blocked,get_physical_card,0.973822832,0.888287616,account_management,new_card,Without
+Louvain,Model Error,Will you reinstate my PIN?,pin_blocked,change_pin,0.784707785,0.502687074,account_management,account_management,Within
+Louvain,Mislabeled,"How do I reset my PIN, I can't seem to use my card?",pin_blocked,change_pin,0.95333302,0.602346662,account_management,account_management,Within
+Louvain,Mislabeled,"My account is blocked, how do I log in now",pin_blocked,terminate_account,0.632445216,0.479144519,account_management,account_management,Within
+Louvain,Model Error,Can I reactivate my PIN?,pin_blocked,change_pin,0.576792419,0.551568349,account_management,account_management,Within
+Louvain,Mislabeled,How do I reset my PIN?,pin_blocked,change_pin,0.976184845,0.880486528,account_management,account_management,Within
+Louvain,Mislabeled,"My card's frozen, what can I do?",pin_blocked,card_not_working,0.951752007,0.735155434,account_management,card_malfunction,Without
+Louvain,Mislabeled,My contanctless has stopped working,contactless_not_working,card_not_working,0.549497366,0.454861166,card_malfunction,card_malfunction,Within
+Louvain,Model Error,The NFC payment wouldn't work on the bus today. Help?,contactless_not_working,declined_card_payment,0.267035633,0.432340028,card_malfunction,transfers,Without
+Louvain,Mislabeled,"I need to make a transfer, what will the fee be?",top_up_by_bank_transfer_charge,transfer_fee_charged,0.647001624,0.47391098,top_up,transfers,Without
+Louvain,Model Error,I would like to refill my account using SWIFT.,top_up_by_bank_transfer_charge,top_up_by_cash_or_cheque,0.739932597,0.473414093,top_up,top_up,Within
+Louvain,Mislabeled,Will a transfer incur a fee?,top_up_by_bank_transfer_charge,transfer_fee_charged,0.904012918,0.593771829,top_up,transfers,Without
+Louvain,Mislabeled,What are the fees for top-ups?,top_up_by_bank_transfer_charge,top_up_by_card_charge,0.969275773,0.728234562,top_up,top_up,Within
+Louvain,Model Error,"I've already topped up, but I cannot see the funds being available. What happened?",pending_top_up,top_up_reverted,0.884170294,0.672532098,top_up,top_up,Within
+Louvain,Mislabeled,"OMG!  I'm trying to load my card and it wont top up!  I desperately need the money either on my card or in my bank, where is it?",pending_top_up,topping_up_by_card,0.349086553,0.404676703,top_up,top_up,Within
+Louvain,Vague,I want to go back on what I did this morning,cancel_transfer,edit_personal_details,0.27455461,0.628232923,transfers,account_management,Without
+Louvain,Mislabeled,Can I change the amount I made on a payment that I made to the payment is correct.,cancel_transfer,card_payment_wrong_exchange_rate,0.302474499,0.339686457,transfers,exchange_rate_currency,Without
+Louvain,Mislabeled,Am I free to top-up as much as I want?,top_up_limits,top_up_by_card_charge,0.877866268,0.524960447,top_up,top_up,Within
+Louvain,Mislabeled,Where is the money I pushed it's on my mobile app as being withdrawn.,wrong_amount_of_cash_received,cash_withdrawal_not_recognised,0.564422667,0.339928453,atm_cash_withdrawal,atm_cash_withdrawal,Within
+Louvain,Mislabeled,My cash withdrawal was partly declined,wrong_amount_of_cash_received,declined_cash_withdrawal,0.977043688,0.336055057,atm_cash_withdrawal,atm_cash_withdrawal,Within
+Louvain,Mislabeled,Will declined funds I tried to withdraw be returned to me?,wrong_amount_of_cash_received,declined_cash_withdrawal,0.976724386,0.454616708,atm_cash_withdrawal,atm_cash_withdrawal,Within
+Louvain,Mislabeled,im not sure what this charge is for,card_payment_fee_charged,direct_debit_payment_not_recognised,0.97164917,0.628059375,card_payment,card_payment,Within
+Louvain,Model Error,how long do money transfers take?,transfer_not_received_by_recipient,pending_transfer,0.866388917,0.547431203,transfers,transfers,Within
+Louvain,Mislabeled,Where is the transfer I started?,transfer_not_received_by_recipient,balance_not_updated_after_bank_transfer,0.855865657,0.417393735,transfers,transfers,Within
+Louvain,Mislabeled,transaction failed?,transfer_not_received_by_recipient,failed_transfer,0.954180598,0.837990038,transfers,transfers,Within
+Louvain,Mislabeled,I transferred some money but the receiver can't pick it up for some reason.,transfer_not_received_by_recipient,transfer_fee_charged,0.389690459,0.362168487,transfers,transfers,Within
+Louvain,Mislabeled,When will my funds transfer?,transfer_not_received_by_recipient,balance_not_updated_after_bank_transfer,0.93185842,0.423659331,transfers,transfers,Within
+Louvain,Mislabeled,Which forms of currency are accepted?,supported_cards_and_currencies,fiat_currency_support,0.699490249,0.356995836,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,What options do I have in regards to payment?,supported_cards_and_currencies,receiving_money,0.250589371,0.312858712,exchange_rate_currency,transactions,Without
+Louvain,Mislabeled,Do you accept other currencies besides US Dollars?,supported_cards_and_currencies,fiat_currency_support,0.928876042,0.410329237,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Model Error,Can I get a copy of the card by email?,getting_virtual_card,order_physical_card,0.616886973,0.436510914,virtual_disposable_cards,new_card,Without
+Louvain,Mislabeled,Can I use my card for payment all over the world?,card_acceptance,country_support,0.622243404,0.438860123,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,"I am traveling to Germany, Will I be able to use my card there?",card_acceptance,country_support,0.8903566,0.669190794,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,areas card is accpeted,card_acceptance,country_support,0.379444629,0.44588816,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,"My top-up showed as complete, but it's no longer there! What's going on here?",top_up_reverted,pending_top_up,0.648778677,0.564632903,top_up,top_up,Within
+Louvain,Model Error,"Hi, i don't know what's going on i've just paid for my top up twice by accident can you help me get a refund please.",top_up_reverted,transaction_charged_twice,0.884984672,0.759284421,top_up,transactions,Without
+Louvain,Mislabeled,The app wouldn't accept my top up.,top_up_reverted,top_up_failed,0.973720968,0.74801027,top_up,top_up,Within
+Louvain,Mislabeled,"I believe my money did not go through with my top up, was there a problem on your end?",top_up_reverted,top_up_failed,0.77933228,0.767190557,top_up,top_up,Within
+Louvain,Model Error,I put money into my account for the minimum balance but the application didn't accept.,top_up_reverted,declined_cash_withdrawal,0.715880156,0.300925997,top_up,card_malfunction,Without
+Louvain,Model Error,I tryed to make a top-up with cryptocurrency but the payment was referted.,top_up_reverted,beneficiary_not_allowed,0.291237831,0.574611207,top_up,transfers,Without
+Louvain,Mislabeled,On my last transaction it seem that my top-up was not successful.,top_up_reverted,top_up_failed,0.949668527,0.681656053,top_up,top_up,Within
+Louvain,Model Error,I have paid money into my account but it doesn't show.,balance_not_updated_after_cheque_or_cash_deposit,transfer_not_received_by_recipient,0.49028331,0.228104183,transactions,transfers,Without
+Louvain,Mislabeled,The balance on my account wasn't updated after I made a depost.,balance_not_updated_after_cheque_or_cash_deposit,balance_not_updated_after_bank_transfer,0.769602656,0.55658728,transactions,transfers,Without
+Louvain,Mislabeled,Can you freeze my account?  I just saw there are transactions on my account that I don't recognize.  How can I fix this?,card_payment_not_recognised,compromised_card,0.931159794,0.439630824,card_payment,new_card,Without
+Louvain,Mislabeled,What should I do to get transactions off of my account if I didn't make them?  My card must have been compromised and I need to freeze it asap!,card_payment_not_recognised,compromised_card,0.944862485,0.493699279,card_payment,new_card,Without
+Louvain,Mislabeled,I won't verify my identity.,why_verify_identity,unable_to_verify_identity,0.931833148,0.542016642,identity_verification,identity_verification,Within
+Louvain,Mislabeled,What other methods are there to verify my identity?,why_verify_identity,verify_my_identity,0.952460825,0.967664388,identity_verification,identity_verification,Within
+Louvain,Mislabeled,What do i need to verify my id?,unable_to_verify_identity,verify_my_identity,0.955170274,0.97131822,identity_verification,identity_verification,Within
+Louvain,Model Error,How do I set-up my PIN for the new card?,get_physical_card,change_pin,0.579431295,0.509355095,new_card,account_management,Without
+Louvain,Mislabeled,Am I allowed to use any card to make a payment?,visa_or_mastercard,card_acceptance,0.401457191,0.392691647,card_info,exchange_rate_currency,Without
+Louvain,Mislabeled,What are the available cards?,visa_or_mastercard,getting_spare_card,0.562713623,0.339428964,card_info,virtual_disposable_cards,Without
+Louvain,Mislabeled,What major card payments are accepted?,visa_or_mastercard,supported_cards_and_currencies,0.88488239,0.368345421,card_info,exchange_rate_currency,Without
+Louvain,Vague,How do I top up my card using your app? I'm new to this.,topping_up_by_card,apple_pay_or_google_pay,0.372666568,0.3104073,top_up,card_info,Without
+Louvain,Mislabeled,Can I top up using my car?,topping_up_by_card,top_up_limits,0.481315821,0.37664174,top_up,top_up,Within
+Louvain,Mislabeled,Where's the money that got charged to my card? It's not showing up in my account balance,topping_up_by_card,transfer_not_received_by_recipient,0.780982733,0.417180527,top_up,transfers,Without
+Louvain,Vague,how can i top up?,topping_up_by_card,top_up_limits,0.917690814,0.617766512,top_up,top_up,Within
+Louvain,Mislabeled,"I did a top-up, but I'm not seeing it in my wallet yet.",topping_up_by_card,pending_top_up,0.335355669,0.277936645,top_up,top_up,Within
+Louvain,Mislabeled,"i know i entered the right info, but my top up isn't in my balance",topping_up_by_card,pending_top_up,0.61904496,0.314795031,top_up,top_up,Within
+Louvain,Mislabeled,Is there a way to transfer funds directly from my card?,topping_up_by_card,card_linking,0.210411265,0.324392217,top_up,new_card,Without
+Louvain,Mislabeled,Why is my money gone right when I attempted to top up,topping_up_by_card,top_up_failed,0.634920478,0.664314126,top_up,top_up,Within
+Louvain,Mislabeled,Why can't I see the top-up amount I just added to my account?,topping_up_by_card,pending_top_up,0.956881702,0.550513229,top_up,top_up,Within
+Louvain,Mislabeled,What is the maximum number of transactions I can make with one card?,disposable_card_limits,getting_spare_card,0.949462473,0.599303515,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,How can I create many temporary cards daily?,disposable_card_limits,getting_spare_card,0.929332554,0.520361593,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Model Error,Are there any hindrances to using a disposable virtual card?,disposable_card_limits,get_disposable_virtual_card,0.664744616,0.39115131,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,How many virtual cards do I get?,disposable_card_limits,getting_virtual_card,0.9509027,0.93939629,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Model Error,What can I use a virtual disposable card for?,disposable_card_limits,get_disposable_virtual_card,0.929357111,0.733139849,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,"I think my identity has been stolen, can you check on unauthorized charges?",compromised_card,unable_to_verify_identity,0.322922409,0.239403961,new_card,identity_verification,Without
+Louvain,Mislabeled,Can I use app to freeze account and dispute fraud?,compromised_card,direct_debit_payment_not_recognised,0.578387737,0.371014828,new_card,card_payment,Without
+Louvain,Model Error,"If I feel someone has my card information, can I get a new card?",compromised_card,order_physical_card,0.387075365,0.243486139,new_card,new_card,Within
+Louvain,Model Error,Can I use app to freeze my card and dispute fraud?,compromised_card,card_payment_not_recognised,0.552020431,0.3984282,new_card,card_payment,Without
+Louvain,Mislabeled,"im so mad right now. theres several charges that I think my x boyfriend made on my card. the companys on the website wouldn't refund me my money, they told me to contact my bank. DO something please.",direct_debit_payment_not_recognised,transaction_charged_twice,0.47430712,0.327003589,card_payment,transactions,Without
+Louvain,Model Error,someone stole my money,direct_debit_payment_not_recognised,cash_withdrawal_not_recognised,0.883776724,0.573538102,card_payment,atm_cash_withdrawal,Without
+Louvain,Mislabeled,There is a transaction from my account that I don't recognize can you trace back the information so I can make sure it's something I did or not?,direct_debit_payment_not_recognised,card_payment_not_recognised,0.503256977,0.440205162,card_payment,card_payment,Within
+Louvain,Model Error,Someone has taken my money and I don't know who,direct_debit_payment_not_recognised,cash_withdrawal_not_recognised,0.924548388,0.523611394,card_payment,atm_cash_withdrawal,Without
+Louvain,Model Error,I was charged on my account that shouldn't be there.,direct_debit_payment_not_recognised,card_payment_fee_charged,0.292235762,0.259138197,card_payment,card_payment,Within
+Louvain,Mislabeled,Why has my payment not gone through?,pending_card_payment,declined_card_payment,0.894755721,0.494719575,card_payment,card_malfunction,Without
+Louvain,Mislabeled,"I was double charged, and the second charge is showing as ""pending"". How long will it be before I get my money back once the second charge has been refunded?",pending_card_payment,transaction_charged_twice,0.974154353,0.974125987,card_payment,transactions,Without
+Louvain,Mislabeled,Someone stole my cards!,lost_or_stolen_phone,lost_or_stolen_card,0.805357575,0.521640775,account_management,new_card,Without
+Louvain,Mislabeled,Good morning. I tried to make a purchase with my credit card last night and again this morning. Both times it was declined. Can you investigate?,declined_transfer,declined_card_payment,0.453353286,0.361623379,transfers,card_malfunction,Without
+Louvain,Model Error,"How can I fix my card, it got declined twice.",declined_transfer,declined_card_payment,0.350626349,0.422946899,transfers,transactions,Without
+Louvain,Model Error,The card got declined twice when I tried to use it to buy something online yesterday.,declined_transfer,declined_card_payment,0.470067114,0.384816847,transfers,transactions,Without
+Louvain,Model Error,How do I contact customer support about a transfer?,declined_transfer,receiving_money,0.625664175,0.529330065,transfers,transactions,Without
+Louvain,Mislabeled,Why was I unable to do a transfer?,declined_transfer,failed_transfer,0.939891636,0.884312491,transfers,transfers,Within
+Louvain,Model Error,Trouble transferring transaction contact for help,declined_transfer,beneficiary_not_allowed,0.696713448,0.342740061,transfers,transfers,Within
+Louvain,Mislabeled,When I try and to buy something using my card it keeps getting declined.,declined_transfer,declined_card_payment,0.964001179,0.58469438,transfers,card_malfunction,Without
+Louvain,Model Error,Double check your funds may be declined,declined_transfer,top_up_by_cash_or_cheque,0.651674271,0.382307705,transfers,transactions,Without
+Louvain,Mislabeled,I can't transfer money from my account.,declined_transfer,failed_transfer,0.92861712,0.645422832,transfers,transfers,Within
+Louvain,Mislabeled,My card is being declined online. Could you tell me what might be broken or wrong with the account?,declined_transfer,declined_card_payment,0.828704834,0.495216153,transfers,card_malfunction,Without
+Louvain,Mislabeled,"I was attempting to purchase a golf club off eBay yesterday, but my credit card was declined. I tried multiple times, and again this morning. Can you check into my card please?",declined_transfer,card_not_working,0.319923103,0.279105719,transfers,card_malfunction,Without
+Louvain,Mislabeled,My credit card was declined.,declined_card_payment,top_up_failed,0.748468399,0.401856203,card_malfunction,card_malfunction,Within
+Louvain,Model Error,How do you fix  my card payment?,declined_card_payment,reverted_card_payment?,0.524751246,0.347636238,card_malfunction,card_payment,Without
+Louvain,Mislabeled,"I transferred money yesterday, but it still isn't available?",pending_transfer,transfer_not_received_by_recipient,0.550403655,0.43543969,transfers,transfers,Within
+Louvain,Mislabeled,How long do transfer pend for?,pending_transfer,transfer_timing,0.443383574,0.660759839,transfers,transfers,Within
+Louvain,Mislabeled,When will the transfer go through?,pending_transfer,transfer_not_received_by_recipient,0.702909529,0.362700049,transfers,transfers,Within
+Louvain,Model Error,When will my transfer go through?,pending_transfer,failed_transfer,0.590757012,0.515255369,transfers,transfers,Within
+Louvain,Mislabeled,"I would like to know why my payment is still pending, can you help?",pending_transfer,pending_card_payment,0.978091002,0.890565092,transfers,card_payment,Without
+Louvain,Mislabeled,Someone transferred money to me and it doesn't show,pending_transfer,transfer_not_received_by_recipient,0.540055513,0.432575141,transfers,transfers,Within
+Louvain,Mislabeled,How long can I expect a transfer to pend for?,pending_transfer,transfer_timing,0.720275998,0.736172432,transfers,transfers,Within
+Louvain,Model Error,How do I retrieve my card from the machine?,card_swallowed,order_physical_card,0.209684089,0.293090527,atm_cash_withdrawal,new_card,Without
+Louvain,Vague,How long until my transfer goes through?,transfer_timing,pending_transfer,0.52926743,0.353001207,transfers,transfers,Within
+Louvain,Mislabeled,how long dies it take for transfers to reflect on my balance,transfer_timing,balance_not_updated_after_bank_transfer,0.705765903,0.509420652,transfers,transfers,Within
+Louvain,Mislabeled,When does the money get transferred to my account,transfer_timing,balance_not_updated_after_bank_transfer,0.898245037,0.389538073,transfers,transfers,Within
+Louvain,Vague,How long does it take for a transfer?,transfer_timing,pending_transfer,0.649270058,0.408171574,transfers,transfers,Within
+Louvain,Mislabeled,I'm not sure why my account has been refunded a payment for an item I've already received about 2 weeks ago. Can you please tell me what is going on?,reverted_card_payment?,Refund_not_showing_up,0.718704343,0.481225283,card_payment,transactions,Without
+Louvain,Mislabeled,My card is being declined for a purchase. I bought items before and the card worked. Do you know what the problem is?,reverted_card_payment?,declined_card_payment,0.935383677,0.519682361,card_payment,card_malfunction,Without
+Louvain,Mislabeled,why did the app refuse to make an approved payment,reverted_card_payment?,declined_card_payment,0.85593003,0.479433904,card_payment,card_malfunction,Without
+Louvain,Model Error,I was contacted by a seller with a message that they never received my money. I am 100% sure it was taken from my account so I definitely need this sorted out soon.,reverted_card_payment?,Refund_not_showing_up,0.384071589,0.426925631,card_payment,transactions,Without
+Louvain,Mislabeled,"I am attempting to make a purchase online, but my card is not working.  I know there are funds available, is this an issue on the banks end?",reverted_card_payment?,declined_card_payment,0.54462564,0.528566307,card_payment,card_malfunction,Without
+Louvain,Mislabeled,I've tried numerous times to submit a transfer of funds. Why isn't it going through?,beneficiary_not_allowed,failed_transfer,0.861623704,0.79657652,transfers,transfers,Within
+Louvain,Mislabeled,I tried to transfer money but it said it wasn't possible? I've done this before and it worked why isn't it working now?,beneficiary_not_allowed,failed_transfer,0.919672847,0.635712728,transfers,transfers,Within
+Louvain,Mislabeled,Why isn't my transfer going through? I get a message saying it's not possible. I've had no issues in the past.,beneficiary_not_allowed,failed_transfer,0.648963332,0.548459121,transfers,transfers,Within
+Louvain,Mislabeled,The account transfer I was trying to do failed.,beneficiary_not_allowed,failed_transfer,0.872537434,0.590182778,transfers,transfers,Within
+Louvain,Model Error,"Why did I get charged for something I bought online? Even though it was international, I thought it would be covered.",transfer_fee_charged,card_payment_fee_charged,0.398525178,0.231140293,transfers,exchange_rate_currency,Without
+Louvain,Mislabeled,What extra charges are there?,transfer_fee_charged,extra_charge_on_statement,0.499397814,0.363721801,transfers,transactions,Without
+Louvain,Mislabeled,Is GBP a supported currency?,receiving_money,fiat_currency_support,0.588665903,0.265613177,transactions,exchange_rate_currency,Without
+Louvain,Model Error,What are your policies for card transfers?,failed_transfer,transfer_into_account,0.138376132,0.335398402,transfers,virtual_disposable_cards,Without
+Louvain,Model Error,What is stopping my money from transferring?,failed_transfer,beneficiary_not_allowed,0.869260669,0.366416516,transfers,transfers,Within
+Louvain,Model Error,"I'm out of money, can I add money with my bank?",transfer_into_account,top_up_by_cash_or_cheque,0.401557624,0.285359089,transfers,top_up,Without
+Louvain,Mislabeled,"I don't understand how to top up my account, can you please explain the process?",transfer_into_account,topping_up_by_card,0.682464421,0.42950916,transfers,top_up,Without
+Louvain,Mislabeled,How do I top up my card?,transfer_into_account,topping_up_by_card,0.947411537,0.642843821,transfers,top_up,Without
+Louvain,Mislabeled,What methods can I use to add money to my account?,transfer_into_account,topping_up_by_card,0.587787271,0.323033274,transfers,top_up,Without
+Louvain,Vague,How does a transfer work?,transfer_into_account,declined_transfer,0.308995575,0.464133529,transfers,top_up,Without
+Louvain,Model Error,Can I purchase extra non-virtual cards?,getting_spare_card,get_disposable_virtual_card,0.617457926,0.651481703,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Model Error,What type of deposits do you accept into my account?,top_up_by_cash_or_cheque,transfer_into_account,0.488421947,0.169437406,top_up,transfers,Without
+Louvain,Model Error,What can I pay with? Does cash work?,top_up_by_cash_or_cheque,cash_withdrawal_charge,0.371041298,0.275837106,top_up,atm_cash_withdrawal,Without
+Louvain,Mislabeled,How can I top-up my card?,top_up_by_cash_or_cheque,topping_up_by_card,0.862873435,0.42255703,top_up,top_up,Within
+Louvain,Mislabeled,How much does it cost in fees to use your card?,order_physical_card,card_payment_fee_charged,0.959581733,0.662282094,new_card,card_payment,Without
+Louvain,Mislabeled,can I have a non virtual card?,order_physical_card,getting_virtual_card,0.549778104,0.764688747,new_card,virtual_disposable_cards,Without
+Louvain,Mislabeled,My non-physical card will not work,virtual_card_not_working,card_not_working,0.965674222,0.642891367,virtual_disposable_cards,card_malfunction,Without
+Louvain,Mislabeled,My card is just not working at this time.,virtual_card_not_working,card_not_working,0.96674937,0.738594925,virtual_disposable_cards,card_malfunction,Without
+Louvain,Mislabeled,Is there a fee for exchanging cash?,wrong_exchange_rate_for_cash_withdrawal,exchange_charge,0.84324789,0.423915885,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Will there be additional costs of I make a withdrawal from a local ATM of British pounds? I need some cash to feel comfortable on the journey home,wrong_exchange_rate_for_cash_withdrawal,cash_withdrawal_charge,0.808808625,0.331079878,exchange_rate_currency,atm_cash_withdrawal,Without
+Louvain,Mislabeled,I feel like too much money was taken during my currency exchange.,wrong_exchange_rate_for_cash_withdrawal,card_payment_wrong_exchange_rate,0.522303224,0.600157456,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Model Error,how do VR cards work,get_disposable_virtual_card,getting_virtual_card,0.374893367,0.408820069,virtual_disposable_cards,new_card,Without
+Louvain,Mislabeled,I would like a temporary virtual card,get_disposable_virtual_card,getting_virtual_card,0.809806347,0.780269339,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,Can i get a single use virtual card,get_disposable_virtual_card,getting_virtual_card,0.560025275,0.82557866,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,how does a virtual card work,get_disposable_virtual_card,getting_virtual_card,0.397601455,0.697821042,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Mislabeled,Can i get a throw away card,get_disposable_virtual_card,order_physical_card,0.650004148,0.483712131,virtual_disposable_cards,new_card,Without
+Louvain,Mislabeled,how many transactions can i make with a disposable card,get_disposable_virtual_card,disposable_card_limits,0.953023911,0.772926359,virtual_disposable_cards,virtual_disposable_cards,Within
+Louvain,Model Error,My funding to my card didn't go through.,top_up_failed,declined_card_payment,0.930184841,0.52891871,top_up,card_malfunction,Without
+Louvain,Mislabeled,"I really need money from my card today, but my card is getting declined. Please help!!",top_up_failed,declined_card_payment,0.481247395,0.448328316,top_up,card_malfunction,Without
+Louvain,Mislabeled,When will my transfer be available in my account.,balance_not_updated_after_bank_transfer,transfer_timing,0.960070133,0.737929272,transfers,transfers,Within
+Louvain,Mislabeled,I didn't get the money I transferred,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.679181278,0.3590665,transfers,transfers,Within
+Louvain,Mislabeled,How long does a UK transfer take?,balance_not_updated_after_bank_transfer,transfer_timing,0.496072918,0.675057416,transfers,transfers,Within
+Louvain,Mislabeled,I made an out of country transfer and it hasn't went through yet.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.723447323,0.413940554,transfers,transfers,Within
+Louvain,Mislabeled,I transferred some money but it is yet to arrive.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.693220496,0.494439446,transfers,transfers,Within
+Louvain,Mislabeled,Why don't I have my transfer?,balance_not_updated_after_bank_transfer,failed_transfer,0.829955161,0.702613293,transfers,transfers,Within
+Louvain,Mislabeled,How long until my transfer will be available to me,balance_not_updated_after_bank_transfer,transfer_timing,0.443067938,0.735202463,transfers,transfers,Within
+Louvain,Model Error,My transfer is pending.,balance_not_updated_after_bank_transfer,pending_transfer,0.963071704,0.799503608,transfers,transfers,Within
+Louvain,Mislabeled,I need to cancel my card that got stolen a little while ago. Someone has already taken some money out and I don't want them to take anymore. Can you please do that?,cash_withdrawal_not_recognised,lost_or_stolen_card,0.422586113,0.391521645,atm_cash_withdrawal,new_card,Without
+Louvain,Mislabeled,How do I cancel my card? There are charges on my account that I didn't make.,cash_withdrawal_not_recognised,card_payment_not_recognised,0.888161302,0.423488331,atm_cash_withdrawal,card_payment,Without
+Louvain,Mislabeled,whats your exchange rate,exchange_charge,exchange_rate,0.972351432,0.772280421,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Where do I find the exchange rate?,exchange_charge,exchange_rate,0.973204911,0.897045673,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Model Error,"If I want to exchange currency, will there be extras?",exchange_charge,exchange_via_app,0.943656087,0.505912339,exchange_rate_currency,exchange_rate_currency,Within
+Louvain,Mislabeled,Is it okay to use a bank card to top up,top_up_by_card_charge,topping_up_by_card,0.878879964,0.398618107,top_up,top_up,Within
+Louvain,Mislabeled,WHAT CAN I DO AFTER THE CARD MISSING,activate_my_card,lost_or_stolen_card,0.93028748,0.618048103,new_card,new_card,Within
+Louvain,Mislabeled,"When I got cash, I'm pretty sure there was a glitch that overcharged me.",cash_withdrawal_charge,wrong_exchange_rate_for_cash_withdrawal,0.942634165,0.399582776,atm_cash_withdrawal,exchange_rate_currency,Without
